@@ -28,6 +28,7 @@ body {
 .heading h1 {
     font-size: 50px;
     margin-top: 20px;
+    font-weight: 900
 }
 
 .heading h1 span {
@@ -410,7 +411,7 @@ nav ul li:hover .brand__overlay ul {
     position: relative;
 }
 
-.item1 {
+.item1{
     position: absolute;
     top: 0;
     left: 0;
@@ -768,11 +769,47 @@ nav ul li:hover .brand__overlay ul {
 
 /* PRODUCT__ITEM */
 .product__bottom {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
     padding: 0 30px;
     
 
+}
+.product__bottom:hover .owl-nav{
+    opacity: 1;
+}
+.owl-nav{
+    font-size: 40px;
+    opacity: 0;
+    transition: 1s;
+}
+.owl-nav span{
+    display: block;
+    border: 2px solid #c0a16c ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    line-height:30px ;
+    transition: .5s;
+}
+.owl-nav span:hover{
+    background-color: #c0a16c;
+}
+.owl-next{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+   background-color:rgba(255, 255, 255, 0)!important;
+
+}
+.owl-prev{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
 }
 .owl-carousel{
 
@@ -842,6 +879,95 @@ margin-left: 0px;
 }
 
 
+/* EDIT */
+.edit{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 30px ;
+}
+
+.edit__item{
+    width: 32%;
+}
+.edit__item img{
+    width: 100%;
+    transition: .6s;
+}
+.edit__item .anh{
+    overflow: hidden;
+}
+.edit__item:hover img{
+    transform: scale(1.1);
+}
+.edit__item p{
+ text-align: center;
+ font-size: 18px;
+ font-weight: bold;
+ padding-top: 15px;
+}
+.edit__item p:first-of-type{
+color: gray;
+}
+.blt{
+    display: flex;
+}
+.blog__item{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+}
+.blog__content{
+    width: 32%;
+    transition: .5s;
+    padding: 15px;
+}
+.blog__content .anh{
+    overflow: hidden;
+    height: 300px;
+}
+.blog__content:hover {
+    box-shadow: 0px 0px 20px 15px rgb(143, 143, 143);
+    transform: translate(5px);
+}
+.blog__content img{
+
+    height: 100%;
+    transition: .5s;
+
+ }
+.blog__content:hover img{
+    transform: scale(1.15);
+
+
+ }
+.blog__content h3{
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.blog__content span{
+    font-size: 13px;
+}
+.blog__content p{
+    font-size: 16px;
+    width: 95%;
+    margin-top: 10px;
+}
+.blog__content a{
+    color: black;
+    padding: 0 15px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.blog__content a:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+
 @media only screen and (max-width: 600px) {
 
     .intro {
@@ -881,6 +1007,20 @@ margin-left: 0px;
         font-size: 16px;
         padding: 0px;
 
+    }
+    .edit{
+        flex-direction: column;
+    }
+    .edit__item{
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    .blog__item{
+        flex-direction: column;
+    }
+    .blog__content{
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
 

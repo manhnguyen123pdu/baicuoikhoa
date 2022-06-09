@@ -1,5 +1,5 @@
 var nut = document.querySelectorAll('.nut ul li')
-var slide = document.querySelectorAll('.item')
+var slide = document.querySelectorAll('.item1')
 var next = document.querySelector('.phai')
 var forw = document.querySelector('.trai')
 
