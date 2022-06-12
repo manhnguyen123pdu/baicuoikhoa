@@ -1023,7 +1023,14 @@ color: gray;
         margin-bottom: 15px;
     }
 }
-
+.thu{
+    width: 200px ;
+    height: 200px;
+    background-color: #000000;
+}
+.thu:hover{
+    background-color: red;
+}
 @media only screen and (max-width: 850px) {
     .nav1 {
         display: none;
